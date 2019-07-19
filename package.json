@@ -1,64 +1,54 @@
 {
   "name": "npm",
-  "version": "1.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "application created by thinkjs",
+  "version": "1.0.0",
   "scripts": {
-    "server": "ts-node src/bootstrap.ts",
-    "tslint": "tslint -c tslint.json './**/*.ts'",
-    "build": "npm run clean && npm run tsc && npm run sync",
-    "build:ind": "npm run tsc",
-    "build:alpha": "npm run build",
-    "tsc": "tsc",
-    "clean": "rimraf ../built/gaea",
-    "test": "ts-node test/bootstrap.ts",
-    "build-indexes": "ts-node tools/index-builder.ts"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/chai-http": "^3.0.5",
-    "@types/ioredis": "^4.0.13",
-    "@types/koa-bodyparser": "^4.3.0",
-    "@types/koa__cors": "^2.2.3",
-    "@types/minimist": "^1.2.0",
-    "@types/mocha": "^5.2.7",
-    "@types/mongodb": "^3.1.28",
-    "@types/mongodb-memory-server": "^1.8.0",
-    "@types/node": "^11.13.17",
-    "@types/node-uuid": "0.0.28",
-    "@types/request": "^2.48.2",
-    "@types/sinon": "^7.0.13",
-    "@types/supertest": "^2.0.8",
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy": "^0.3.2",
-    "ioredis-mock": "^4.12.1",
-    "minimist": "^1.2.0",
-    "mocha": "^6.1.4",
-    "mongodb-memory-server": "^4.2.2",
-    "rimraf": "^2.6.3",
-    "sinon": "^7.3.2",
-    "supertest": "^3.4.2",
-    "ts-loader": "^6.0.4",
-    "ts-node": "^8.3.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "start": "node development.js",
+    "test": "THINK_UNIT_TEST=1 nyc ava test/ && nyc report --reporter=html",
+    "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/",
+    "lint": "eslint src/",
+    "lint-fix": "eslint --fix src/"
   },
   "dependencies": {
-    "@koa/cors": "^2.2.3",
-    "@types/moment-timezone": "^0.5.12",
-    "ioredis": "^4.11.2",
-    "koa-bodyparser": "^4.2.1",
-    "moment": "^2.24.0",
-    "moment-range": "^4.0.2",
-    "moment-timezone": "^0.5.26",
-    "node-uuid": "^1.4.8",
-    "request": "^2.88.0"
+    "q": "^1.5.1",
+    "think-cache": "^1.0.0",
+    "think-cache-file": "^1.0.8",
+    "think-logger3": "^1.0.0",
+    "think-model": "^1.0.0",
+    "think-model-mysql": "^1.0.0",
+    "think-session": "^1.0.0",
+    "think-session-file": "^1.0.5",
+    "think-view": "^1.0.0",
+    "think-view-nunjucks": "^1.0.1",
+    "thinkjs": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-think-node": "^1.0.0",
+    "node-notifier": "^5.0.2",
+    "think-inspect": "0.0.2",
+    "think-babel": "^1.0.3",
+    "think-watcher": "^3.0.0",
+    "eslint": "^4.2.0",
+    "eslint-config-think": "^1.0.0",
+    "ava": "^0.18.0",
+    "nyc": "^7.0.0"
+  },
+  
+  "repository": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "readmeFilename": "README.md",
+  "thinkjs": {
+    "metadata": {
+      "name": "NpmServer",
+      "description": "application created by thinkjs",
+      "babel": true
+    },
+    "projectName": "NpmServer",
+    "clone": false,
+    "isMultiModule": false
   }
 }
-
