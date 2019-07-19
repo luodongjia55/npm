@@ -36,7 +36,6 @@
   },
   
   "repository": "",
-  "license": "MIT",
   "engines": {
     "node": ">=6.0.0"
   },
