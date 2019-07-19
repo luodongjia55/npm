@@ -5,15 +5,11 @@
   "main": "index.js",
   "scripts": {
     "server": "ts-node src/bootstrap.ts",
-    "server:rpc": "ts-node src/app.rpc.ts",
     "tslint": "tslint -c tslint.json './**/*.ts'",
     "build": "npm run clean && npm run tsc && npm run sync",
     "build:ind": "npm run tsc",
     "build:alpha": "npm run build",
-    "build:sdk": "wt-sdk build -e ./src/sdk/index.ts -o ../../built/gaea-sdk -p ./scripts/sdk/package.json",
-    "pub": "npm run build:sdk && wt-git-publish -s ../../built/gaea-sdk -n wt-rd-pipeline-sdk-built",
     "tsc": "tsc",
-    "sync": "sync-gaea",
     "clean": "rimraf ../built/gaea",
     "test": "ts-node test/bootstrap.ts",
     "build-indexes": "ts-node tools/index-builder.ts"
