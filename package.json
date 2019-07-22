@@ -1,7 +1,7 @@
 {
   "name": "dongjia-npm",
   "description": "application created by thinkjs",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "scripts": {
     "start": "node development.js",
     "test": "THINK_UNIT_TEST=1 nyc ava test/ && nyc report --reporter=html",
