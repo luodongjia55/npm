@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-think-node": "^1.0.0",
+    "babel-preset-think-node": "^1.0.4",
     "node-notifier": "^5.0.2",
     "think-inspect": "0.0.2",
     "think-babel": "^1.0.3",
