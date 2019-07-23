@@ -22,7 +22,7 @@ podTemplate(label: label, cloud: 'kubernetes',
                     echo 'Ready to deploy environment'
 
                     container("wtctl") {
-                        sh "wtctl --test --version"
+                        sh "wtctl --test"
                     }
                 }
                 else {
